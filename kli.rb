@@ -5,20 +5,20 @@
 class Kli < Formula
   desc "A CLI to access, query and manage KAI servers."
   homepage "https://github.com/konstellation-io/kai-kli"
-  version "2.2.0"
+  version "2.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v2.2.0/kai-kli_2.2.0_darwin-arm64.tar.gz"
-      sha256 "102084dfd404d1b82d77c5d0c77e9908830909366bec7169f7d2140729b47cfa"
+      url "https://github.com/konstellation-io/kai-kli/releases/download/v2.3.0/kai-kli_2.3.0_darwin-arm64.tar.gz"
+      sha256 "7e4d07d6e641ec652bd32dd41d031f18574a981e217be257c8cc2ab4e29f31c8"
 
       def install
         bin.install "bin/kli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v2.2.0/kai-kli_2.2.0_darwin-amd64.tar.gz"
-      sha256 "3766777869ae13fcf6641be22b8c481cd27656de21d2649770eaf0605329c444"
+      url "https://github.com/konstellation-io/kai-kli/releases/download/v2.3.0/kai-kli_2.3.0_darwin-amd64.tar.gz"
+      sha256 "1847f345bd23888c1a8a68c6d9e5e6f577210e3b2c0dd3e121cde4f08769de81"
 
       def install
         bin.install "bin/kli"
@@ -27,17 +27,17 @@ class Kli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v2.2.0/kai-kli_2.2.0_linux-arm64.tar.gz"
-      sha256 "3a0e58c4891b463ef6eed966c9429324a187bc242095f7e5513742b725b33293"
+    if Hardware::CPU.intel?
+      url "https://github.com/konstellation-io/kai-kli/releases/download/v2.3.0/kai-kli_2.3.0_linux-amd64.tar.gz"
+      sha256 "40901070b28c254bb33cd5e03f8f92c7b4da3ea0280ebbaa436d73620d0a7e69"
 
       def install
         bin.install "bin/kli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v2.2.0/kai-kli_2.2.0_linux-amd64.tar.gz"
-      sha256 "88d59b5df3b8584e87d91faf60d676251979c3f6312fc2a232db8fb2fff56f71"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/konstellation-io/kai-kli/releases/download/v2.3.0/kai-kli_2.3.0_linux-arm64.tar.gz"
+      sha256 "11b585f735ef794af85cbc2f3ec6fb6a9577ed9c0cd5a77793d56e388d720461"
 
       def install
         bin.install "bin/kli"
