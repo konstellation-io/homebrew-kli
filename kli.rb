@@ -10,7 +10,7 @@ class Kli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/konstellation-io/kai-kli/releases/download/v0.4.2/kai-kli_0.4.2_darwin-arm64.tar.gz"
-      sha256 "b719c283085f4ac998f18070f2216e30543893073a875074e99e0c2a243d46bb"
+      sha256 "f7b91ea94acdfa952ad88000efe1c3ee28b7d69a5aae2177a5076288f44118a1"
 
       def install
         bin.install "bin/kli"
@@ -18,7 +18,7 @@ class Kli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/konstellation-io/kai-kli/releases/download/v0.4.2/kai-kli_0.4.2_darwin-amd64.tar.gz"
-      sha256 "3a21c06ddf525e5e157ca21e67c0efb1088fac95f6d13b8ca2ad78124027f2a8"
+      sha256 "73e9a6f76b48b4700e7770bb677656c48037c86214142eff8f1bab9073737afc"
 
       def install
         bin.install "bin/kli"
@@ -29,7 +29,7 @@ class Kli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/konstellation-io/kai-kli/releases/download/v0.4.2/kai-kli_0.4.2_linux-arm64.tar.gz"
-      sha256 "ac9a67c149d9ffe6786f3689386976778f004fd365279a1cbfee6f01414e7d13"
+      sha256 "ba1653e56e6c34a293bd885b3af4fd0c4a3d4539a3621f82fcd1f7dea317c6d1"
 
       def install
         bin.install "bin/kli"
@@ -37,7 +37,7 @@ class Kli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/konstellation-io/kai-kli/releases/download/v0.4.2/kai-kli_0.4.2_linux-amd64.tar.gz"
-      sha256 "10e93d288465b9cb5cda5697a04fc2df5248fb44d6c513ee866bd3858ad36aa7"
+      sha256 "a729f5383de77ec43fc2a0744ec353441afeb2baa19175e934975fd92b6c6e03"
 
       def install
         bin.install "bin/kli"
