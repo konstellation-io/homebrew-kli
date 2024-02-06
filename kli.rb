@@ -5,43 +5,23 @@
 class Kli < Formula
   desc "A CLI to access, query and manage KAI servers."
   homepage "https://github.com/konstellation-io/kai-kli"
-  version "0.4.2"
+  version "0.5.0"
+  depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.4.2/kai-kli_0.4.2_darwin-arm64.tar.gz"
-      sha256 "f7b91ea94acdfa952ad88000efe1c3ee28b7d69a5aae2177a5076288f44118a1"
+  if Hardware::CPU.arm?
+    url "https://github.com/konstellation-io/kai-kli/releases/download/v0.5.0/kai-kli_0.5.0_darwin-arm64.tar.gz"
+    sha256 "b45e030223fe7880cf8f765a65052bada1fb53ddc7128c6def6c4979314b12fa"
 
-      def install
-        bin.install "bin/kli"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.4.2/kai-kli_0.4.2_darwin-amd64.tar.gz"
-      sha256 "73e9a6f76b48b4700e7770bb677656c48037c86214142eff8f1bab9073737afc"
-
-      def install
-        bin.install "bin/kli"
-      end
+    def install
+      bin.install "bin/kli"
     end
   end
+  if Hardware::CPU.intel?
+    url "https://github.com/konstellation-io/kai-kli/releases/download/v0.5.0/kai-kli_0.5.0_darwin-amd64.tar.gz"
+    sha256 "ed04d21a20e78935c9bb0841f89525c2542833bd681f262430460e311e9fdd70"
 
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.4.2/kai-kli_0.4.2_linux-arm64.tar.gz"
-      sha256 "ba1653e56e6c34a293bd885b3af4fd0c4a3d4539a3621f82fcd1f7dea317c6d1"
-
-      def install
-        bin.install "bin/kli"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.4.2/kai-kli_0.4.2_linux-amd64.tar.gz"
-      sha256 "a729f5383de77ec43fc2a0744ec353441afeb2baa19175e934975fd92b6c6e03"
-
-      def install
-        bin.install "bin/kli"
-      end
+    def install
+      bin.install "bin/kli"
     end
   end
 end
