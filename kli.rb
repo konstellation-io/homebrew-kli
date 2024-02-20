@@ -5,20 +5,20 @@
 class Kli < Formula
   desc "A CLI to access, query and manage KAI servers."
   homepage "https://github.com/konstellation-io/kai-kli"
-  version "0.6.1"
+  version "0.6.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.6.1/kai-kli_0.6.1_darwin-arm64.tar.gz"
-      sha256 "9a5223c7057f409c6d8c7045ff12644d76343eb7b34a28af57fdcc4a2bce6fd4"
+      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.6.2/kai-kli_0.6.2_darwin-arm64.tar.gz"
+      sha256 "f3cce8bd47a76fbe0d2775bf64e53c53315c176d80a07af898890ffbe86d1d6e"
 
       def install
         bin.install "bin/kli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.6.1/kai-kli_0.6.1_darwin-amd64.tar.gz"
-      sha256 "d43ab26d04968ba073786bd22b89bb56ae641dcaa12f4d30f230a0cb5b3529b2"
+      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.6.2/kai-kli_0.6.2_darwin-amd64.tar.gz"
+      sha256 "a2d8d690f58631794c3ebc4cb1790054e9f6d30fa5dbf344cd16c5704924bb4d"
 
       def install
         bin.install "bin/kli"
@@ -28,16 +28,16 @@ class Kli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.6.1/kai-kli_0.6.1_linux-arm64.tar.gz"
-      sha256 "ca899fde41e35ecc2b7e4ce1d921210cd3134365775a82b5e8cced4fab60234f"
+      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.6.2/kai-kli_0.6.2_linux-arm64.tar.gz"
+      sha256 "82fdb756cb685bf92e668a6dacdabcfc7a15451eed4924864210cb4bec0c59d2"
 
       def install
         bin.install "bin/kli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.6.1/kai-kli_0.6.1_linux-amd64.tar.gz"
-      sha256 "11302483e92a825ae52205f8935d5ee83f7fc68a32a7e226ede08d2655249ca7"
+      url "https://github.com/konstellation-io/kai-kli/releases/download/v0.6.2/kai-kli_0.6.2_linux-amd64.tar.gz"
+      sha256 "047e7fc90184806c2e31467ba871ca6a8f5892357d3ffa6e78264323aa51c36b"
 
       def install
         bin.install "bin/kli"
